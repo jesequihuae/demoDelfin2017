@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DemoDelfin2017</string>
+    <string name="textoLogin">SISTEMA DE ALERTAS MEDIANTE VIDEOVIGILANCIA</string>
+    <string name="smartSDK">SMART SDK</string>
 </resources>
