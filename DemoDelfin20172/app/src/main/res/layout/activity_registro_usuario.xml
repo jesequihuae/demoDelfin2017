@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registro_usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorFondo"
+    android:paddingTop="70dp"
+    tools:context="com.example.jesus.demodelfin2017.RegistroUsuario">
+
+    <ImageView
+        android:src="@drawable/loginlogo"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:backgroundTint="@android:color/white"
+            android:background="@drawable/button_background"
+            android:layout_margin="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <TextView
+                android:text="REGISTRO"
+                android:paddingTop="25dp"
+                android:paddingLeft="15dp"
+                android:textSize="26dp"
+                android:textColor="@color/azulBajito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/area_nombreUsuario"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:backgroundTint="@color/azulBajito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_nombreUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/azulBajito"
+                    android:hint="Nombre de usuario" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/area_email"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:backgroundTint="@color/azulBajito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:backgroundTint="@color/azulBajito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo electronico" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/area_contrasena"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+
+                android:backgroundTint="@color/azulBajito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_contrasena"
+                    android:backgroundTint="@color/azulBajito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre de usuario" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:text="NEXT"
+            android:textSize="30dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/azulBajito"
+            android:textColor="@android:color/white"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="310dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/button" />
+
+        <Button
+            android:id="@+id/backMainFromRegister"
+            android:text="x"
+            android:textSize="30dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/azulBajito"
+            android:textColor="@android:color/white"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="319dp" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

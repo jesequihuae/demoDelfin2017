@@ -6,27 +6,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class RegistroUsuario extends AppCompatActivity {
 
-    Button registro_btn;
+    Button regresar_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_registro_usuario);
 
-        registro_btn = (Button) findViewById(R.id.botonRegistro);
+        regresar_btn = (Button) findViewById(R.id.backMainFromRegister);
 
-        registro_btn.setOnClickListener(new View.OnClickListener() {
+        regresar_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                enviarARegistro();
+                enviarAPrincipal();
             }
         });
     }
 
-    public void enviarARegistro(){
-        Intent i = new Intent(this,RegistroUsuario.class);
+    public void enviarAPrincipal(){
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
 }
