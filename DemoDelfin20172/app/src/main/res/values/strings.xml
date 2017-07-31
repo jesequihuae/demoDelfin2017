@@ -9,5 +9,7 @@
     <string name="nombreUsuario">Nombre de usuario</string>
     <string name="contrasena">Contraseña</string>
     <string name="correoElectronico">Correo electrónico</string>
-
+    <string name="title_activity_cont_p">ContP</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

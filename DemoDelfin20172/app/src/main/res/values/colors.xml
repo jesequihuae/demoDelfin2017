@@ -6,4 +6,6 @@
     <color name="colorFondo">#EC407A</color>
     <color name="azulFondo">#20325F</color>
     <color name="azulBajito">#59C0D2</color>
+    <color name="fondoContP1">#EEEEEE</color>
+    <color name="blanco">#FFF</color>
 </resources>

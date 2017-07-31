@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorFondo"
-    android:paddingTop="70dp"
-    tools:context="com.example.jesus.demodelfin2017.MainActivity">
+    android:paddingTop="70dp">
 
     <ImageView
         android:src="@drawable/loginlogo"
