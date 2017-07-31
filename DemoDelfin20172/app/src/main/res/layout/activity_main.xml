@@ -40,7 +40,7 @@
     <Button
         android:id="@+id/botonLogin"
         android:layout_marginTop="200dp"
-        android:text="Login"
+        android:text="@string/login"
         android:textSize="16dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         nombreUsuario_registro = (EditText) findViewById(R.id.registroParte).findViewById(R.id.input_nombreUsuario);
         email_registro         = (EditText) findViewById(R.id.registroParte).findViewById(R.id.input_email);
-        contrasena_login       = (EditText) findViewById(R.id.registroParte).findViewById(R.id.input_contrasena);
+        contrasena_registro    = (EditText) findViewById(R.id.registroParte).findViewById(R.id.input_contrasena);
 
         agregarClickeableBotones();
     }

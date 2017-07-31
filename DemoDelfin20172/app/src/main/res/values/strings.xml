@@ -2,4 +2,11 @@
     <string name="app_name">DemoDelfin2017</string>
     <string name="textoLogin">SISTEMA DE ALERTAS MEDIANTE VIDEOVIGILANCIA</string>
     <string name="smartSDK">SMART SDK</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="ir">Ir</string>
+    <string name="registro">Registro</string>
+    <string name="continuar">Continuar</string>
+    <string name="nombreUsuario">Nombre de usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="correoElectronico">Correo electrónico</string>
 </resources>
