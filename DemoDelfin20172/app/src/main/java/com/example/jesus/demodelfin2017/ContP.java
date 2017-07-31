@@ -1,7 +1,11 @@
 package com.example.jesus.demodelfin2017;
 
+import android.content.Context;
+import android.net.Uri;
+import android.renderscript.RenderScript;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -16,9 +20,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ContP extends AppCompatActivity {
+public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmentInteractionListener{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -34,12 +39,19 @@ public class ContP extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    public ImageView Notifi,Settings,Camera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cont_p);
 
+<<<<<<< HEAD
+=======
+        Notifi = (ImageView)findViewById(R.id.notifi);
+        Settings = (ImageView)findViewById(R.id.settings);
+        Camera = (ImageView)findViewById(R.id.camera);
+>>>>>>> c4803a20e2981a4e44f5da72eba6ff9baa5501c8
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarr);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -50,18 +62,27 @@ public class ContP extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
     }
 
+    public void cambiaImagen(int i){
+        switch (i){
+            case 1:
+                Notifi.setImageResource(R.mipmap.notac);
+                Camera.setImageResource(R.mipmap.camarainac);
+                Settings.setImageResource(R.mipmap.confinac);
+                break;
+            case 2:
+                Notifi.setImageResource(R.mipmap.notinac);
+                Camera.setImageResource(R.mipmap.camaraac);
+                Settings.setImageResource(R.mipmap.confinac);
+                break;
+            case 3:
+                Notifi.setImageResource(R.mipmap.notinac);
+                Camera.setImageResource(R.mipmap.camaraac);
+                Settings.setImageResource(R.mipmap.confinac);
+                break;
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -85,6 +106,11 @@ public class ContP extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -94,6 +120,7 @@ public class ContP extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private static int Indice;
 
         public PlaceholderFragment() {
         }
@@ -102,19 +129,28 @@ public class ContP extends AppCompatActivity {
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
+        public static Fragment newInstance(int sectionNumber) {
+            Fragment fragment=null;
+            ContP obj = new ContP();
+            switch (sectionNumber){
+                case 1:
+                    //obj.cambiaImagen(1);
+                    fragment=new NotifiFragment();
+                    break;
+                case 2:
+                    //obj.cambiaImagen(2);
+                    fragment=new NotifiFragment();
+                    break;
+                case 3:
+                    //obj.cambiaImagen(3);
+                    fragment=new NotifiFragment();
+                    break;
+            }
+            //PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
+            //fragment.setArguments(args);
             return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_cont, container, false);
-            return rootView;
         }
     }
 

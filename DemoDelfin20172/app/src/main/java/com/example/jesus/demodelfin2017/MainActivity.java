@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button go_registro_btn;
     Button go_main_btn;
     Button login_btn;
+    Button btn_login;
     EditText nombreUsuario_login, contrasena_login;
     EditText nombreUsuario_registro, email_registro, contrasena_registro;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         go_registro_btn = (Button) findViewById(R.id.loginParte).findViewById(R.id.goToRegister);
         go_main_btn     = (Button) findViewById(R.id.registroParte).findViewById(R.id.backMainFromRegister);
         login_btn       = (Button) findViewById(R.id.botonLogin);
+        btn_login      = (Button) findViewById(R.id.buttonLogin);
 
         nombreUsuario_login = (EditText) findViewById(R.id.loginParte).findViewById(R.id.input_nombreUsuarioLogin);
         contrasena_login    = (EditText) findViewById(R.id.loginParte).findViewById(R.id.input_passwordLogin);
@@ -78,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 findViewById(R.id.registroParte).setVisibility(View.GONE);
                 findViewById(R.id.loginParte).setVisibility(View.GONE);
+            }
+        });
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ContP.class);
+                startActivity(intent);
             }
         });
     }
