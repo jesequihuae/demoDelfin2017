@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="310dp"
             android:layout_centerHorizontal="true"
-            android:id="@+id/button" />
+            android:id="@+id/continuarButton" />
 
     <LinearLayout
         android:orientation="horizontal"
