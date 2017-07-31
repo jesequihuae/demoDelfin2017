@@ -1,11 +1,7 @@
 package com.example.jesus.demodelfin2017;
 
-import android.content.Context;
 import android.net.Uri;
-import android.renderscript.RenderScript;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -20,14 +16,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmentInteractionListener{
+public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmentInteractionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use
+     * fragments for each of the sections. We use a
      * {@link FragmentPagerAdapter} derivative, which will keep every
      * loaded fragment in memory. If this becomes too memory intensive, it
      * may be best to switch to a
@@ -39,17 +34,13 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-    public ImageView Notifi,Settings,Camera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cont_p);
+        setContentView(R.layout.activity_contp);
 
-        Notifi = (ImageView)findViewById(R.id.notifi);
-        Settings = (ImageView)findViewById(R.id.settings);
-        Camera = (ImageView)findViewById(R.id.camera);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarr);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -59,32 +50,16 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
+
     }
 
-    public void cambiaImagen(int i){
-        switch (i){
-            case 1:
-                Notifi.setImageResource(R.mipmap.notac);
-                Camera.setImageResource(R.mipmap.camarainac);
-                Settings.setImageResource(R.mipmap.confinac);
-                break;
-            case 2:
-                Notifi.setImageResource(R.mipmap.notinac);
-                Camera.setImageResource(R.mipmap.camaraac);
-                Settings.setImageResource(R.mipmap.confinac);
-                break;
-            case 3:
-                Notifi.setImageResource(R.mipmap.notinac);
-                Camera.setImageResource(R.mipmap.camaraac);
-                Settings.setImageResource(R.mipmap.confinac);
-                break;
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_cont, menu);
+        getMenuInflater().inflate(R.menu.menu_ejemplo, menu);
         return true;
     }
 
@@ -117,7 +92,6 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
-        private static int Indice;
 
         public PlaceholderFragment() {
         }
@@ -128,18 +102,14 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
          */
         public static Fragment newInstance(int sectionNumber) {
             Fragment fragment=null;
-            ContP obj = new ContP();
             switch (sectionNumber){
                 case 1:
-                    //obj.cambiaImagen(1);
                     fragment=new NotifiFragment();
                     break;
                 case 2:
-                    //obj.cambiaImagen(2);
                     fragment=new NotifiFragment();
                     break;
                 case 3:
-                    //obj.cambiaImagen(3);
                     fragment=new NotifiFragment();
                     break;
             }
@@ -148,6 +118,15 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             //fragment.setArguments(args);
             return fragment;
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_ejemplo, container, false);
+            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            return rootView;
         }
     }
 
@@ -178,11 +157,11 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Notifi";
                 case 1:
-                    return "SECTION 2";
+                    return "Camera";
                 case 2:
-                    return "SECTION 3";
+                    return "Settings";
             }
             return null;
         }
