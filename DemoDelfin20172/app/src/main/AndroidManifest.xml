@@ -21,17 +21,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mapa" />
-        <activity
-            android:name=".ContP"
-            android:label="@string/title_activity_ejemplo"
-            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".mapa"></activity>
+        <activity android:name=".ContP"></activity>
+
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key" />
         <activity
             android:name=".google_test"
             android:label="@string/title_activity_google_test"></activity>
+
+
     </application>
 
         <!--
