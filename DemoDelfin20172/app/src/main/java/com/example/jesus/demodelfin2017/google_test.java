@@ -27,6 +27,7 @@ public class google_test extends FragmentActivity implements OnMapReadyCallback 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
         agregarMarcadores(googleMap);
     }
 
