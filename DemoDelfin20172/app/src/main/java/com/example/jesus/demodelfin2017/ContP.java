@@ -46,12 +46,9 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cont_p);
 
-<<<<<<< HEAD
-=======
         Notifi = (ImageView)findViewById(R.id.notifi);
         Settings = (ImageView)findViewById(R.id.settings);
         Camera = (ImageView)findViewById(R.id.camera);
->>>>>>> c4803a20e2981a4e44f5da72eba6ff9baa5501c8
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarr);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
