@@ -18,7 +18,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmentInteractionListener {
+public class ContP extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -78,11 +78,6 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
-
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -123,9 +118,7 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_ejemplo, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            View rootView = inflater.inflate(R.layout.activity_contp, container, false);
             return rootView;
         }
     }

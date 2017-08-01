@@ -3,10 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.jesus.demodelfin2017.NotifiFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <Spinner
+                    android:id="@+id/camarasSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/camaraDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/camarasSpinner"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <Spinner
+                    android:id="@+id/alertasSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/alertasDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/alertasSpinner"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/listaVacia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </LinearLayout>
 
 </FrameLayout>
