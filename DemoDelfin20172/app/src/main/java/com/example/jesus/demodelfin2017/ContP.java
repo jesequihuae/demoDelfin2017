@@ -107,7 +107,7 @@ public class ContP extends AppCompatActivity implements NotifiFragment.OnFragmen
                     fragment=new NotifiFragment();
                     break;
                 case 2:
-                    fragment = new google_test();
+                    fragment = new CamaraSeccion();
                     break;
                 case 3:
                     fragment=new NotifiFragment();
