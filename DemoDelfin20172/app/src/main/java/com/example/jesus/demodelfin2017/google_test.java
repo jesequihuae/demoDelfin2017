@@ -2,6 +2,9 @@ package com.example.jesus.demodelfin2017;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -10,24 +13,23 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class google_test extends FragmentActivity implements OnMapReadyCallback {
+public class google_test extends SupportMapFragment implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_google_test);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+
+        getMapAsync(this);
+
+        return rootView;
     }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.getUiSettings().setZoomControlsEnabled(true);
         agregarMarcadores(googleMap);
     }
 
@@ -70,6 +72,6 @@ public class google_test extends FragmentActivity implements OnMapReadyCallback 
         mMap.addMarker( new MarkerOptions().position(plazaDelSol3).title("Plaza del Sol 3"));
 
         mMap.moveCamera( CameraUpdateFactory.newLatLng(biblioteca) );
-        mMap.moveCamera( CameraUpdateFactory.zoomTo(15));
+        mMap.moveCamera( CameraUpdateFactory.zoomTo(0));
     }
 }
