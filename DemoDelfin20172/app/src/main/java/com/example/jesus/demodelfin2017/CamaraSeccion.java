@@ -33,6 +33,7 @@ public class CamaraSeccion extends Fragment {
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs2);
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.camaraac));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.camaraac));
+        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(
                 new TabLayout.OnTabSelectedListener() {
                     @Override

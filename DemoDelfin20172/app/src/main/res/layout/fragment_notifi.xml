@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondeGris"
     tools:context="com.example.jesus.demodelfin2017.NotifiFragment">
     <LinearLayout
         android:orientation="vertical"
@@ -11,54 +12,85 @@
             android:orientation="horizontal"
             android:weightSum="2"
             android:layout_width="wrap_content"
-            android:layout_height="60dp">
+            android:layout_height="55dp"
+            android:background="@color/blanco">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="match_parent">
-                <Spinner
-                    android:id="@+id/camarasSpinner"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:id="@+id/camaraDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/camarasSpinner"
-                    android:ems="10"
-                    android:focusable="false"
-                    android:inputType="textMultiLine" />
+                    android:layout_height="match_parent"
+                    android:background="@color/azulBajito"
+                    android:padding="2dp">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blanco">
+                        <Spinner
+                            android:id="@+id/camarasSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <EditText
+                            android:id="@+id/camaraDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/camarasSpinner"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:inputType="textMultiLine" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="match_parent">
-                <Spinner
-                    android:id="@+id/alertasSpinner"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:id="@+id/alertasDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/alertasSpinner"
-                    android:ems="10"
-                    android:focusable="false"
-                    android:inputType="textMultiLine" />
+                    android:layout_height="match_parent"
+                    android:background="@color/azulBajito"
+                    android:padding="2dp">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blanco">
+                        <Spinner
+                            android:id="@+id/alertasSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <EditText
+                            android:id="@+id/alertasDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/alertasSpinner"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:inputType="textMultiLine" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <ListView
             android:id="@+id/listaVacia"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp"
+            android:background="@color/blanco"></ListView>
     </LinearLayout>
 
 </FrameLayout>

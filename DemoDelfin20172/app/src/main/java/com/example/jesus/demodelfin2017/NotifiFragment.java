@@ -20,10 +20,22 @@ public class NotifiFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_notifi, container, false);
 
         ListView lista;
-        ArrayAdapter<String> adaptador;
+
+        String[] Alertas = {"Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017",
+                "Robo - Camara3 - 23/10/2017","Multitud - Camara 2 - 24/10/2017"};
 
         lista = (ListView)rootView.findViewById(R.id.listaVacia);
-        adaptador = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1);
+        ArrayAdapter adaptador = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,Alertas);
         lista.setAdapter(adaptador);
 
         String[] camaras = { "Borregos", "Piedritas", "Cafeteria", "Todas" };
