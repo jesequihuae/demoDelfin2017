@@ -102,7 +102,7 @@ public class ContP extends AppCompatActivity {
                     fragment=new NotifiFragment();
                     break;
                 case 2:
-                    fragment=new NotifiFragment();
+                    fragment = new CamaraSeccion();
                     break;
                 case 3:
                     fragment=new NotifiFragment();
