@@ -51,8 +51,24 @@ public class ContP extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
-
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.notac));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.camaraac));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.mipmap.confac));
+        //tabLayout.setupWithViewPager(mViewPager);
+        //mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(
+                new TabLayout.OnTabSelectedListener() {
+                    @Override
+                    public void onTabSelected(TabLayout.Tab tab) {
+                        mViewPager.setCurrentItem(tab.getPosition());
+                    }
+                    @Override
+                    public void onTabUnselected(TabLayout.Tab tab) {}
+                    @Override
+                    public void onTabReselected(TabLayout.Tab tab) {}
+                }
+        );
     }
 
 
@@ -123,10 +139,6 @@ public class ContP extends AppCompatActivity {
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
